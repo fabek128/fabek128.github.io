@@ -6,7 +6,7 @@ body {
 
   height: 100%;
   color: #ADADAD;
-  font-size: 1.4em;
+  font-size:calc(12px + 1.2vw);
   line-height: 1.4;
   font-family: 'Roboto', sans-serif;
 }
