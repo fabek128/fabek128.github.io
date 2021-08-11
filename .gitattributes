@@ -131,8 +131,6 @@ Procfile    text
 *.ico  binary
 *.jng  binary
 *.jp2  binary
-*.jpg  binary
-*.jpeg binary
 *.jpx  binary
 *.jxr  binary
 *.pdf  binary
