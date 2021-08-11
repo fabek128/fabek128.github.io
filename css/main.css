@@ -1,15 +1,14 @@
 
 html,
 body {
-    
-    background: rgb(10,23,13);
-    background: radial-gradient(circle, rgba(10,23,13,1) 21%, rgba(4,13,20,1) 100%);
-    
+  background-image: url("/img/fondo.jpg");
+  background-size: cover;
+
   height: 100%;
   color: #ADADAD;
-  font-size: 1em;
+  font-size: 1.4em;
   line-height: 1.4;
-  font-family: 'Roboto', sans-serif;   
+  font-family: 'Roboto', sans-serif;
 }
 
 
@@ -18,7 +17,7 @@ body {
 }
 
 .icons{
-    background-color: #407466;
+    background-color: #ADADAD;
     padding: 0.3cm;
     margin-top: 0.6cm;
     -webkit-border-radius: 7px;
@@ -28,7 +27,7 @@ body {
 
 .icons IMG {
     margin: 0.2cm;
-    
+
     margin-left: 0.8cm;
     margin-right: 0.8cm;
 }
