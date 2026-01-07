@@ -3,3 +3,31 @@
 # Useful .gitignore templates: https://github.com/github/gitignore
 
 CLAUDE.md
+
+# Old site backup
+old-site/
+
+# Astro
+node_modules/
+dist/
+.astro/
+
+# Dependencies
+package-lock.json
+
+# Environment
+.env
+.env.production
+
+# MacOS
+.DS_Store
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor
+.vscode/
+.idea/
