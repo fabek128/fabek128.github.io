@@ -29,8 +29,29 @@ const navLinks = [
 			</div>
 		</nav>
 
-		<div class="mt-12 grid grid-cols-[minmax(0,1fr)_auto] items-start gap-8 md:gap-12 lg:grid-cols-[1.05fr_0.95fr]">
+		<div class="mt-12 md:grid md:grid-cols-[1.05fr_0.95fr] md:items-start md:gap-12">
 			<div class="space-y-6 animate-rise">
+				<figure class="float-right ml-4 mb-4 w-24 sm:w-28 md:hidden scale-[1.05]">
+					<div class="rounded-2xl border border-[color:var(--border)] bg-[color:var(--surface)] p-2 shadow-glow">
+						<picture>
+							<source
+								type="image/webp"
+								srcset="/fbk14-mobile.webp 128w, /fbk14-tablet.webp 256w, /fbk14-desktop.webp 320w"
+								sizes="128px"
+							/>
+							<img
+								src="/fbk14.png"
+								alt="Fabian Figueredo"
+								class="h-full w-full rounded-xl object-cover"
+								width="220"
+								height="220"
+								loading="eager"
+								decoding="async"
+								fetchpriority="high"
+							/>
+						</picture>
+					</div>
+				</figure>
 				<p class="text-sm uppercase tracking-[0.25em] text-[color:var(--muted)]">
 					Generative AI Specialist / Data Scientist
 				</p>
@@ -42,7 +63,7 @@ const navLinks = [
 					modern models.
 				</p>
 
-				<div class="flex flex-wrap gap-3 pt-2">
+				<div class="clear-both flex flex-wrap gap-3 pt-2">
 					<a
 						href="#contact"
 						class="inline-flex items-center justify-center rounded-full bg-[color:var(--accent)] px-6 py-3 text-sm font-semibold text-[color:var(--bg)] transition hover:translate-y-[-1px] hover:shadow-glow focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--accent)]"
@@ -60,7 +81,7 @@ const navLinks = [
 				</div>
 			</div>
 
-			<div class="flex justify-end">
+			<div class="hidden justify-end md:flex">
 				<figure class="relative w-24 sm:w-28 md:w-32 lg:w-40 xl:w-44 scale-[1.05]">
 					<div class="rounded-2xl border border-[color:var(--border)] bg-[color:var(--surface)] p-2 shadow-glow">
 						<picture>
