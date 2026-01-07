@@ -1,47 +1,87 @@
 ---
+const navLinks = [
+	{ label: "What I do", href: "#what-i-do" },
+	{ label: "How I work", href: "#how-i-work" },
+	{ label: "Projects", href: "#projects" },
+	{ label: "About", href: "#about" },
+	{ label: "Contact", href: "#contact" }
+];
 ---
 
-<section id="hero" class="relative min-h-screen flex items-center">
-	<div class="container mx-auto px-6 py-20">
-		<div class="max-w-5xl">
-			<div class="mb-8">
-				<img
-					src="/fbk14.webp"
-					alt="Fabian Figueredo"
-					class="w-32 h-32 rounded-full object-cover border-4 border-emerald-500/30"
-					width="128"
-					height="128"
-				/>
+<section id="hero" class="relative overflow-hidden">
+	<div class="mx-auto max-w-6xl px-6 pt-10 pb-20 lg:pt-12 lg:pb-28">
+		<nav class="flex flex-wrap items-center justify-between gap-6 text-sm text-[color:var(--muted)]">
+			<a
+				href="#hero"
+				class="font-display text-sm uppercase tracking-[0.2em] text-[color:var(--ink)]"
+			>
+				Fabian Figueredo
+			</a>
+			<div class="hidden md:flex flex-wrap items-center gap-6">
+				{navLinks.map((link) => (
+					<a
+						href={link.href}
+						class="transition hover:text-[color:var(--ink)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--accent)]"
+					>
+						{link.label}
+					</a>
+				))}
+			</div>
+		</nav>
+
+		<div class="mt-12 grid items-start gap-12 lg:grid-cols-[1.05fr_0.95fr]">
+			<div class="space-y-6 animate-rise">
+				<p class="text-sm uppercase tracking-[0.25em] text-[color:var(--muted)]">
+					Generative AI Specialist / Data Scientist
+				</p>
+				<h1 class="font-display text-4xl leading-tight md:text-5xl lg:text-6xl">
+					Fabian <span class="text-[color:var(--accent)]">Figueredo</span>
+				</h1>
+				<p class="text-lg leading-relaxed text-[color:var(--muted)] md:text-xl">
+					I turn complex data into actionable insights and build intelligent AI solutions with
+					modern models.
+				</p>
+
+				<div class="flex flex-wrap gap-3 pt-2">
+					<a
+						href="#contact"
+						class="inline-flex items-center justify-center rounded-full bg-[color:var(--accent)] px-6 py-3 text-sm font-semibold text-[color:var(--bg)] transition hover:translate-y-[-1px] hover:shadow-glow focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--accent)]"
+					>
+						Ver redes
+					</a>
+					<a
+						href="https://github.com/fabek128"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="inline-flex items-center justify-center rounded-full border border-[color:var(--border)] bg-[color:var(--surface)] px-6 py-3 text-sm font-semibold text-[color:var(--ink)] transition hover:border-[color:var(--accent)] hover:text-[color:var(--accent)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--accent)]"
+					>
+						Ver proyectos/GitHub
+					</a>
+				</div>
 			</div>
 
-			<h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-				Hi, I'm <span class="text-emerald-400">Fabian Figueredo</span>
-			</h1>
-
-			<p class="text-2xl md:text-3xl text-gray-400 mb-6 font-light">
-				Generative AI Specialist & Data Scientist
-			</p>
-
-			<p class="text-xl text-gray-300 mb-10 max-w-3xl leading-relaxed">
-				I transform complex data into actionable insights and build intelligent solutions
-				with modern AI technologies.
-			</p>
-
-			<div class="flex gap-4">
-				<a
-					href="#contact"
-					class="inline-block px-8 py-3 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold rounded-lg transition"
-				>
-					Get in touch
-				</a>
-				<a
-					href="https://github.com/fabek128"
-					target="_blank"
-					rel="noopener noreferrer"
-					class="inline-block px-8 py-3 border-2 border-gray-700 hover:border-emerald-500 text-gray-300 hover:text-emerald-400 font-semibold rounded-lg transition"
-				>
-					View GitHub →
-				</a>
+			<div class="flex justify-start lg:justify-end">
+				<figure class="relative w-24 sm:w-28 md:w-32 lg:w-40 xl:w-44">
+					<div class="rounded-2xl border border-[color:var(--border)] bg-[color:var(--surface)] p-2 shadow-glow">
+						<picture>
+							<source
+								type="image/webp"
+								srcset="/fbk14-mobile.webp 128w, /fbk14-tablet.webp 256w, /fbk14-desktop.webp 320w"
+								sizes="(min-width: 1024px) 176px, (min-width: 640px) 128px, 96px"
+							/>
+							<img
+								src="/fbk14.png"
+								alt="Fabian Figueredo"
+								class="h-full w-full rounded-xl object-cover"
+								width="220"
+								height="220"
+								loading="eager"
+								decoding="async"
+								fetchpriority="high"
+							/>
+						</picture>
+					</div>
+				</figure>
 			</div>
 		</div>
 	</div>

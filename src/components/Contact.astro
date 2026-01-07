@@ -1,4 +1,5 @@
 ---
+const email = "fabek128@gmail.com";
 const socialLinks = [
 	{ name: "GitHub", url: "https://github.com/fabek128" },
 	{ name: "LinkedIn", url: "https://www.linkedin.com/in/fabianfigueredo" },
@@ -7,31 +8,94 @@ const socialLinks = [
 ];
 ---
 
-<section id="contact" class="py-24 px-6 border-t border-gray-800">
-	<div class="container mx-auto max-w-5xl">
-		<h2 class="text-3xl md:text-4xl font-bold mb-12">
-			Connect
-		</h2>
+<section id="contact" class="border-t border-[color:var(--border)] py-20 px-6 lg:py-24">
+	<div class="mx-auto max-w-6xl">
+		<div class="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
+			<div class="space-y-6">
+				<h2 class="font-display text-3xl md:text-4xl">Contact</h2>
+				<p class="max-w-xl text-sm text-[color:var(--muted)]">
+					Want to collaborate or talk AI? Reach me directly or connect on social.
+				</p>
 
-		<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-			{socialLinks.map(link => (
-				<a
-					href={link.url}
-					target="_blank"
-					rel="noopener noreferrer"
-					class="p-6 border border-gray-800 hover:border-emerald-500 rounded-lg text-center transition group"
-				>
-					<span class="text-gray-300 group-hover:text-emerald-400 font-medium transition">
-						{link.name}
-					</span>
-				</a>
-			))}
+				<div class="rounded-2xl border border-[color:var(--border)] bg-[color:var(--surface)] p-6">
+					<p class="text-xs uppercase tracking-[0.3em] text-[color:var(--muted)]">Email</p>
+					<p class="mt-2 text-base font-semibold text-[color:var(--ink)]">{email}</p>
+					<div class="mt-4 flex flex-wrap items-center gap-3">
+						<button
+							type="button"
+							data-copy-email
+							data-email={email}
+							class="inline-flex items-center justify-center rounded-full bg-[color:var(--accent)] px-5 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-[color:var(--bg)] transition hover:translate-y-[-1px] hover:shadow-glow focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--accent)]"
+						>
+							Copiar email
+						</button>
+						<span class="text-xs text-[color:var(--muted)]" data-copy-status aria-live="polite"></span>
+					</div>
+				</div>
+			</div>
+
+			<div class="grid gap-4 sm:grid-cols-2">
+				{socialLinks.map((link) => (
+					<a
+						href={link.url}
+						target="_blank"
+						rel="noopener noreferrer"
+						class="flex items-center justify-between rounded-2xl border border-[color:var(--border)] bg-[color:var(--surface)] px-5 py-4 text-sm font-semibold text-[color:var(--ink)] transition hover:border-[color:var(--accent)] hover:text-[color:var(--accent)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--accent)]"
+					>
+						<span>{link.name}</span>
+						<span class="text-[color:var(--muted)]">-&gt;</span>
+					</a>
+				))}
+			</div>
 		</div>
 	</div>
 </section>
 
-<footer class="py-12 px-6 border-t border-gray-800">
-	<div class="container mx-auto max-w-5xl text-center text-gray-500 text-sm">
+<footer class="border-t border-[color:var(--border)] px-6 py-10">
+	<div class="mx-auto max-w-6xl text-sm text-[color:var(--muted)]">
 		<p>&copy; {new Date().getFullYear()} Fabian Figueredo</p>
 	</div>
 </footer>
+
+<script>
+	const copyButton = document.querySelector("[data-copy-email]");
+	if (copyButton) {
+		const status = document.querySelector("[data-copy-status]");
+
+		copyButton.addEventListener("click", async () => {
+			const email = copyButton.getAttribute("data-email") || "";
+			if (!email) {
+				return;
+			}
+
+			let copied = false;
+			try {
+				await navigator.clipboard.writeText(email);
+				copied = true;
+			} catch (error) {
+				copied = false;
+			}
+
+			if (!copied) {
+				const helper = document.createElement("textarea");
+				helper.value = email;
+				helper.setAttribute("readonly", "");
+				helper.style.position = "absolute";
+				helper.style.left = "-9999px";
+				document.body.appendChild(helper);
+				helper.select();
+				try {
+					document.execCommand("copy");
+					copied = true;
+				} catch (error) {
+					copied = false;
+				}
+				document.body.removeChild(helper);
+			}
+
+			if (status) {
+				status.textContent = copied ? "Email copiado" : "No se pudo copiar";
+			}
+		});
+	}
+</script>

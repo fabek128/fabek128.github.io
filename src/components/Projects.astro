@@ -1,26 +1,30 @@
 ---
 ---
 
-<section id="projects" class="py-24 px-6 border-t border-gray-800">
-	<div class="container mx-auto max-w-5xl">
-		<h2 class="text-3xl md:text-4xl font-bold mb-8">
-			Projects
-		</h2>
-
-		<p class="text-gray-400 mb-8">
-			Check out my open source work and contributions on GitHub.
-		</p>
+<section id="projects" class="border-t border-[color:var(--border)] py-20 px-6 lg:py-24">
+	<div class="mx-auto max-w-6xl">
+		<div class="flex flex-wrap items-end justify-between gap-6">
+			<h2 class="font-display text-3xl md:text-4xl">Projects</h2>
+			<p class="max-w-xl text-sm text-[color:var(--muted)]">
+				Open source work and experiments live on GitHub.
+			</p>
+		</div>
 
 		<a
 			href="https://github.com/fabek128"
 			target="_blank"
 			rel="noopener noreferrer"
-			class="inline-flex items-center gap-2 text-emerald-400 hover:text-emerald-300 font-semibold transition"
+			class="group mt-10 flex items-center justify-between gap-6 rounded-2xl border border-[color:var(--border)] bg-[color:var(--surface)] px-6 py-5 transition hover:border-[color:var(--accent)]"
 		>
-			View GitHub Profile
-			<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-			</svg>
+			<div>
+				<p class="text-xs uppercase tracking-[0.2em] text-[color:var(--muted)]">GitHub</p>
+				<p class="mt-2 text-lg font-semibold text-[color:var(--ink)]">
+					github.com/fabek128
+				</p>
+			</div>
+			<span class="text-sm font-semibold text-[color:var(--accent)] transition group-hover:translate-x-1">
+				View profile
+			</span>
 		</a>
 	</div>
 </section>

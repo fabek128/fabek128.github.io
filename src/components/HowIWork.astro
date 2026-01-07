@@ -1,29 +1,43 @@
 ---
+const steps = [
+	{
+		title: "Discover",
+		description: "Align on the problem, the data reality, and the success criteria."
+	},
+	{
+		title: "Build",
+		description: "Design and ship AI systems that fit the product and the stack."
+	},
+	{
+		title: "Measure",
+		description: "Validate results in production and iterate with real feedback."
+	}
+];
 ---
 
-<section id="experience" class="py-24 px-6 border-t border-gray-800">
-	<div class="container mx-auto max-w-5xl">
-		<h2 class="text-3xl md:text-4xl font-bold mb-16">
-			Experience
-		</h2>
-
-		<div class="space-y-8">
-			<div>
-				<h3 class="text-xl font-bold text-white mb-2">Generative AI & Data Science</h3>
-				<p class="text-gray-400 leading-relaxed">
-					Specialized in building intelligent solutions with LLMs, machine learning models,
-					and data analysis. Experienced in transforming complex data into actionable insights.
-				</p>
-			</div>
-
-			<div>
-				<h3 class="text-xl font-bold text-white mb-2">Software Development</h3>
-				<p class="text-gray-400 leading-relaxed">
-					Many years of experience as a software developer working with <span class="text-emerald-400 font-medium">.NET Core</span>,
-					<span class="text-emerald-400 font-medium">Java</span>, and <span class="text-emerald-400 font-medium">Python</span>.
-					Building scalable, production-ready applications.
-				</p>
-			</div>
+<section id="how-i-work" class="border-t border-[color:var(--border)] py-20 px-6 lg:py-24">
+	<div class="mx-auto max-w-6xl">
+		<div class="flex flex-wrap items-end justify-between gap-6">
+			<h2 class="font-display text-3xl md:text-4xl">How I work</h2>
+			<p class="max-w-xl text-sm text-[color:var(--muted)]">
+				A compact process that keeps delivery honest and grounded in data.
+			</p>
 		</div>
+
+		<ol class="mt-10 grid gap-6 md:grid-cols-3">
+			{steps.map((step, index) => (
+				<li class="rounded-2xl border border-[color:var(--border)] bg-[color:var(--surface)] p-6">
+					<div class="flex items-center gap-3">
+						<span class="flex h-10 w-10 items-center justify-center rounded-full border border-[color:var(--border)] text-sm font-semibold text-[color:var(--accent)]">
+							{String(index + 1).padStart(2, "0")}
+						</span>
+						<h3 class="font-display text-xl">{step.title}</h3>
+					</div>
+					<p class="mt-4 text-sm leading-relaxed text-[color:var(--muted)]">
+						{step.description}
+					</p>
+				</li>
+			))}
+		</ol>
 	</div>
 </section>

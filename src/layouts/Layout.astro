@@ -16,6 +16,7 @@ const { title, description } = Astro.props;
 		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/png" href="/icon.png" />
+		<meta name="theme-color" content="#f97316" />
 		<meta name="generator" content={Astro.generator} />
 
 		<!-- Open Graph / Facebook -->
@@ -23,36 +24,33 @@ const { title, description } = Astro.props;
 		<meta property="og:url" content="https://fabek128.github.io/" />
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
+		<meta property="og:image" content="https://fabek128.github.io/icon.png" />
 
 		<!-- Twitter -->
 		<meta property="twitter:card" content="summary" />
 		<meta property="twitter:url" content="https://fabek128.github.io/" />
 		<meta property="twitter:title" content={title} />
 		<meta property="twitter:description" content={description} />
+		<meta property="twitter:image" content="https://fabek128.github.io/icon.png" />
 
 		<title>{title}</title>
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+		<link
+			href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+			rel="stylesheet"
+		>
 	</head>
-	<body class="bg-gray-950 text-gray-100 antialiased">
-		<slot />
+	<body class="bg-[color:var(--bg)] text-[color:var(--ink)] antialiased">
+		<a
+			href="#main"
+			class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:rounded-full focus:bg-[color:var(--surface)] focus:px-4 focus:py-2 focus:text-sm focus:text-[color:var(--ink)] focus:shadow-glow"
+		>
+			Skip to content
+		</a>
+		<div class="page-background"></div>
+		<main id="main" class="relative">
+			<slot />
+		</main>
 	</body>
 </html>
-
-<style is:global>
-	* {
-		box-sizing: border-box;
-		margin: 0;
-		padding: 0;
-	}
-
-	html {
-		font-family: 'Inter', system-ui, -apple-system, sans-serif;
-		scroll-behavior: smooth;
-	}
-
-	body {
-		min-height: 100vh;
-	}
-</style>
