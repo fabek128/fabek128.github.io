@@ -1,40 +1,31 @@
 ---
-const techStack = [
-	"Python",
-	".NET Core",
-	"Java",
-	"Machine Learning",
-	"AI/LLMs",
-	"Data Analysis"
-];
+const techStack = ["Python", ".NET Core", "Java", "Machine Learning", "AI/LLMs", "Data Analysis"];
 ---
 
-<section id="about" class="py-20 px-6">
-	<div class="max-w-4xl mx-auto">
-		<h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
-			About Me
+<section id="about" class="py-24 px-6 border-t border-gray-800 bg-gray-900/30">
+	<div class="container mx-auto max-w-5xl">
+		<h2 class="text-3xl md:text-4xl font-bold mb-12">
+			About
 		</h2>
 
-		<div class="space-y-6 text-lg text-gray-300 leading-relaxed">
+		<div class="space-y-6 text-lg text-gray-300 leading-relaxed mb-12">
 			<p>
-				I'm a <strong class="text-white">Generative AI Specialist</strong> and <strong class="text-white">Data Scientist</strong> with extensive experience building intelligent solutions that solve real-world problems.
+				I'm a Generative AI Specialist and Data Scientist with extensive experience
+				building intelligent solutions that solve real-world problems.
 			</p>
 
 			<p>
-				With many years as a software developer, I bring a strong technical foundation in <strong class="text-white">.NET Core, Java, and Python</strong>. This diverse background allows me to bridge the gap between cutting-edge AI research and practical, production-ready applications.
-			</p>
-
-			<p>
-				I'm passionate about leveraging data and AI to create meaningful impact, whether that's through building ML models, developing generative AI applications, or architecting scalable software systems.
+				With many years as a software developer, I bring a strong technical foundation
+				that allows me to bridge the gap between cutting-edge AI research and practical,
+				production-ready applications.
 			</p>
 		</div>
 
-		<!-- Tech Stack Pills -->
-		<div class="mt-10">
-			<h3 class="text-xl font-semibold mb-4 text-center text-gray-400">Technologies & Tools</h3>
-			<div class="flex flex-wrap justify-center gap-3">
+		<div>
+			<h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-4">Technologies</h3>
+			<div class="flex flex-wrap gap-3">
 				{techStack.map(tech => (
-					<span class="px-4 py-2 bg-gray-800 text-emerald-400 rounded-full text-sm font-medium border border-gray-700">
+					<span class="px-4 py-2 bg-gray-800 text-emerald-400 rounded-lg text-sm font-medium border border-gray-700">
 						{tech}
 					</span>
 				))}

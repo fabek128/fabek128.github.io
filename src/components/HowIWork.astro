@@ -1,45 +1,29 @@
 ---
-const steps = [
-	{
-		number: "01",
-		title: "Discover",
-		description: "Understanding your needs and exploring the problem space to identify the best approach."
-	},
-	{
-		number: "02",
-		title: "Build",
-		description: "Developing solutions with clean code, modern frameworks, and scalable architecture."
-	},
-	{
-		number: "03",
-		title: "Measure",
-		description: "Iterating based on feedback and data to ensure quality and continuous improvement."
-	}
-];
 ---
 
-<section id="how-i-work" class="py-20 px-6">
-	<div class="max-w-6xl mx-auto">
-		<h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
-			How I Work
+<section id="experience" class="py-24 px-6 border-t border-gray-800">
+	<div class="container mx-auto max-w-5xl">
+		<h2 class="text-3xl md:text-4xl font-bold mb-16">
+			Experience
 		</h2>
 
-		<div class="grid md:grid-cols-3 gap-8">
-			{steps.map((step, index) => (
-				<div class="relative">
-					<div class="flex flex-col items-center text-center space-y-4">
-						<div class="w-16 h-16 rounded-full bg-emerald-500/20 border-2 border-emerald-500 flex items-center justify-center">
-							<span class="text-2xl font-bold text-emerald-400">{step.number}</span>
-						</div>
-						<h3 class="text-2xl font-semibold text-emerald-400">{step.title}</h3>
-						<p class="text-gray-400 leading-relaxed">{step.description}</p>
-					</div>
+		<div class="space-y-8">
+			<div>
+				<h3 class="text-xl font-bold text-white mb-2">Generative AI & Data Science</h3>
+				<p class="text-gray-400 leading-relaxed">
+					Specialized in building intelligent solutions with LLMs, machine learning models,
+					and data analysis. Experienced in transforming complex data into actionable insights.
+				</p>
+			</div>
 
-					{index < steps.length - 1 && (
-						<div class="hidden md:block absolute top-8 left-1/2 w-full h-0.5 bg-gradient-to-r from-emerald-500/50 to-transparent" />
-					)}
-				</div>
-			))}
+			<div>
+				<h3 class="text-xl font-bold text-white mb-2">Software Development</h3>
+				<p class="text-gray-400 leading-relaxed">
+					Many years of experience as a software developer working with <span class="text-emerald-400 font-medium">.NET Core</span>,
+					<span class="text-emerald-400 font-medium">Java</span>, and <span class="text-emerald-400 font-medium">Python</span>.
+					Building scalable, production-ready applications.
+				</p>
+			</div>
 		</div>
 	</div>
 </section>

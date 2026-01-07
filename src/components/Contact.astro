@@ -1,53 +1,27 @@
 ---
 const socialLinks = [
-	{
-		name: "GitHub",
-		url: "https://github.com/fabek128",
-		icon: "github"
-	},
-	{
-		name: "LinkedIn",
-		url: "https://www.linkedin.com/in/fabianfigueredo",
-		icon: "linkedin"
-	},
-	{
-		name: "Twitter",
-		url: "https://twitter.com/fabek128",
-		icon: "twitter"
-	},
-	{
-		name: "Instagram",
-		url: "https://www.instagram.com/fabian128k/",
-		icon: "instagram"
-	}
+	{ name: "GitHub", url: "https://github.com/fabek128" },
+	{ name: "LinkedIn", url: "https://www.linkedin.com/in/fabianfigueredo" },
+	{ name: "Twitter", url: "https://twitter.com/fabek128" },
+	{ name: "Instagram", url: "https://www.instagram.com/fabian128k/" }
 ];
 ---
 
-<section id="contact" class="py-20 px-6 bg-gray-900/50">
-	<div class="max-w-4xl mx-auto">
-		<h2 class="text-3xl md:text-4xl font-bold text-center mb-8">
-			Let's Connect
+<section id="contact" class="py-24 px-6 border-t border-gray-800">
+	<div class="container mx-auto max-w-5xl">
+		<h2 class="text-3xl md:text-4xl font-bold mb-12">
+			Connect
 		</h2>
 
-		<p class="text-center text-gray-400 mb-12 text-lg">
-			Feel free to reach out through any of these platforms
-		</p>
-
-		<!-- Social Links -->
 		<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
 			{socialLinks.map(link => (
 				<a
 					href={link.url}
 					target="_blank"
 					rel="noopener noreferrer"
-					class="group flex flex-col items-center gap-3 p-6 bg-gray-800 hover:bg-gray-700 rounded-xl border border-gray-700 hover:border-emerald-500/50 transition-all duration-300"
+					class="p-6 border border-gray-800 hover:border-emerald-500 rounded-lg text-center transition group"
 				>
-					<img
-						src={`/img/social/${link.icon}.png`}
-						alt={link.name}
-						class="w-12 h-12 opacity-80 group-hover:opacity-100 transition-opacity"
-					/>
-					<span class="text-sm font-medium text-gray-300 group-hover:text-emerald-400 transition-colors">
+					<span class="text-gray-300 group-hover:text-emerald-400 font-medium transition">
 						{link.name}
 					</span>
 				</a>
@@ -56,9 +30,8 @@ const socialLinks = [
 	</div>
 </section>
 
-<!-- Footer -->
-<footer class="py-8 px-6 border-t border-gray-800">
-	<div class="max-w-6xl mx-auto text-center text-gray-500 text-sm">
-		<p>&copy; {new Date().getFullYear()} Fabian Figueredo. All rights reserved.</p>
+<footer class="py-12 px-6 border-t border-gray-800">
+	<div class="container mx-auto max-w-5xl text-center text-gray-500 text-sm">
+		<p>&copy; {new Date().getFullYear()} Fabian Figueredo</p>
 	</div>
 </footer>
