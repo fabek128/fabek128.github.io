@@ -1,20 +1,20 @@
 ---
 ---
 
-<section id="hero" class="min-h-screen flex items-center justify-center px-6 py-20">
-	<div class="max-w-6xl w-full mx-auto">
-		<div class="grid md:grid-cols-2 gap-12 items-center">
+<section id="hero" class="min-h-screen flex items-center justify-center px-6 md:px-12 py-24 md:py-32">
+	<div class="max-w-7xl w-full mx-auto">
+		<div class="grid md:grid-cols-[1.2fr,0.8fr] gap-16 md:gap-20 items-center">
 			<!-- Left: Content -->
-			<div class="space-y-6">
-				<h1 class="text-5xl md:text-6xl font-bold tracking-tight">
+			<div class="space-y-8">
+				<h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight">
 					Hi, I'm <span class="text-emerald-400">Fabian Figueredo</span>
 				</h1>
 
-				<p class="text-xl md:text-2xl text-gray-400 font-light">
+				<p class="text-xl md:text-2xl lg:text-3xl text-gray-400 font-light">
 					Generative AI Specialist & Data Scientist
 				</p>
 
-				<p class="text-lg text-gray-300 leading-relaxed">
+				<p class="text-base md:text-lg lg:text-xl text-gray-300 leading-relaxed max-w-2xl">
 					Transforming complex data into actionable insights and building intelligent solutions with modern technology.
 				</p>
 
@@ -39,21 +39,21 @@
 
 			<!-- Right: Photo -->
 			<div class="flex justify-center md:justify-end">
-				<div class="relative">
-					<div class="absolute inset-0 bg-emerald-500/20 blur-3xl rounded-full"></div>
+				<div class="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
+					<div class="absolute inset-0 bg-emerald-500/20 blur-3xl rounded-full animate-pulse"></div>
 					<picture>
 						<source
 							type="image/webp"
 							srcset="/fbk14-mobile.webp 128w, /fbk14-tablet.webp 224w, /fbk14-desktop.webp 448w"
-							sizes="(max-width: 768px) 192px, 224px"
+							sizes="(max-width: 768px) 256px, 384px"
 						/>
 						<img
 							src="/fbk14.png"
 							alt="Fabian Figueredo"
-							class="relative rounded-full w-48 h-48 md:w-56 md:h-56 object-cover border-4 border-gray-800 shadow-2xl"
+							class="relative rounded-full w-full h-full object-cover border-4 border-gray-800 shadow-2xl ring-2 ring-emerald-500/20"
 							loading="eager"
-							width="224"
-							height="224"
+							width="384"
+							height="384"
 						/>
 					</picture>
 				</div>
